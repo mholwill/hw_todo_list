@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
       removeItem: function (index) {
         this.items.splice(index, 1);
+      },
+      completeItem: function (index){
+        this.items[index].completed = true;
       }
     }
   });

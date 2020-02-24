@@ -1,0 +1,72 @@
+body {
+  background-color: lavender;
+}
+
+#app {
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li span {
+  padding: 8px;
+}
+
+li button {
+  background: blueviolet;
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+li button:hover {
+  background-color: hotpink;
+}
+
+li.is-completed {
+  border: 1px solid #1a681e;
+  color: #1a681e;
+  border-radius: 8px;
+}
+
+li.not-completed {
+  border: 1px solid #f2360c;
+  border-radius: 8px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 50%;
+  border-radius: 8px;
+}
+
+button{
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: hotpink;
+}
