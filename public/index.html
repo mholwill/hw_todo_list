@@ -9,18 +9,19 @@
   <body>
     <h1>My To Do List</h1>
     <div id="app">
-      <ul>
-      <li v-for="(item, index) in items">
-      <span>{{item.name}}</span>
-      <span v-if="item.priority === 'High'">DO IT!</span>
-      <span v-if="item.priority === 'Low'">TICK TOCK!</span>
-        </li>
-      </ul>
       <form @submit.prevent="saveNewItem">
       <label for="new-item">Add a new item:</label>
       <input type="text" id="new-item" v-model="newItem" required>
       <input type="submit" value="Save new item">
     </form>
+      <ul>
+        <li v-for="(item, index) in items">
+        <span>{{item.name}}</span>
+        <!-- <span v-if="item.completed">HIGH!</span>
+        <span v-if="!item.completed">SOON!</span> -->
+        <button @click="removeItem(index)">Remove</button>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

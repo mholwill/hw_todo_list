@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     el: "#app",
     data: {
       items: [
-        {name: "Wash Car", priority: "Low"},
-        {name: "Pay bills", priority: "High"},
-        {name: "Shopping", priority: "High"}
+        {name: "Wash Car", completed: true},
+        {name: "Pay bills", completed: false},
+        {name: "Shopping", completed: false}
       ],
       newItem: "",
     },
@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
       saveNewItem: function () {
         this.items.push({
           name: this.newItem,
-          priority: "Low"
+          completed: false
         });
       this.newItem = '';
+    },
+      removeItem: function (index) {
+        this.items.splice(index, 1);
       }
     }
   });
