@@ -1,11 +1,12 @@
 body {
-  background-color: lavender;
+  background-image: url("../images/line_paper.jpg");
 }
 
 #app {
   width: 60%;
   margin: 0 auto;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Reenie Beanie';
+  font-size: 3em;
 }
 
 ul {
@@ -14,9 +15,15 @@ ul {
   list-style-type: none;
 }
 
+h1 {
+  font-family: 'Reenie Beanie';
+  font-size: 7em;
+  text-align: center;
+}
+
 li {
-  margin: 20px 0;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
 }
@@ -26,47 +33,43 @@ li span {
 }
 
 li button {
-  background: blueviolet;
-  color: white;
-  border: 1px solid black;
-  padding: 10px;
   cursor: pointer;
-  border-radius: 8px;
+  text-decoration: none;
 }
 
-li button:hover {
-  background-color: hotpink;
-}
 
-li.is-completed {
-  border: 1px solid #1a681e;
-  color: #1a681e;
-  border-radius: 8px;
+span.is-completed {
+  text-decoration: line-through;
 }
-
-li.not-completed {
-  border: 1px solid #f2360c;
-  border-radius: 8px;
+button.is-completed {
+  text-decoration: line-through;
 }
 
 input[type="text"] {
   padding: 10px;
   width: 50%;
-  border-radius: 8px;
+  background: none;
+  border: none;
+  border-bottom: dotted;
 }
 
-button{
-  padding: 10px;
-  background: #000;
-  color: #fff;
+input[type="submit"]{
+  font-family: 'Reenie Beanie';
+  font-size: 0.75em;
+  background: none;
+  border: none;
+  border-bottom: solid 1px;
+}
+
+button {
   cursor: pointer;
-  border: 1px solid #000;
+  border: none;
+  background: none;
+  font-family: 'Reenie Beanie';
+  font-size: 1em;
+  border-bottom: solid 1px;
 }
 
 input[type="submit"] {
   cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: hotpink;
 }

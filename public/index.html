@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>TO DO LIST</title>
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/bundle.js"></script>
   </head>
@@ -15,13 +16,12 @@
         <input type="submit" value="Save new item">
       </form>
       <ul>
-        <li v-for="(item, index) in items"
-          :class="item.completed ? 'is-completed':'not-completed'">
-          <span>{{item.name}}</span>
-          <span v-if="item.completed">Completed it</span>
-          <span v-if="!item.completed">Need to do!</span>
-          <button v-if="!item.completed" @click="completeItem(index)">Done</button>
-          <button @click="removeItem(index)">Remove</button>
+        <li v-for="(item, index) in items">
+          <span :class="item.completed ? 'is-completed':'not-completed'">{{item.name}}</span>
+          <!-- <span v-if="item.completed" :class="item.completed ? 'is-completed':'not-completed'">Completed it</span> -->
+          <!-- <span v-if="!item.completed">Need to do!</span> -->
+          <button v-if="!item.completed" @click="completeItem(index)" :class="item.completed ? 'is-completed':'not-completed'">Done</button>
+          <button class="li-button" @click="removeItem(index)">Remove</button>
         </li>
       </ul>
     </div>
