@@ -10,11 +10,13 @@
   <body>
     <h1>My To Do List</h1>
     <div id="app">
+      <div class="form-container">
       <form @submit.prevent="saveNewItem">
         <label for="new-item">Add a new item:</label>
         <input type="text" id="new-item" v-model="newItem" required>
         <input type="submit" value="Save new item">
       </form>
+      </div>
       <ul>
         <li v-for="(item, index) in items">
           <span :class="item.completed ? 'is-completed':'not-completed'">{{item.name}}</span>

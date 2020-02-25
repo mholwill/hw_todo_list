@@ -37,6 +37,12 @@ li button {
   text-decoration: none;
 }
 
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
 
 span.is-completed {
   text-decoration: line-through;
@@ -47,10 +53,13 @@ button.is-completed {
 
 input[type="text"] {
   padding: 10px;
-  width: 50%;
+  width: 40%;
   background: none;
   border: none;
   border-bottom: dotted;
+  font-family: 'Reenie Beanie';
+  font-size: 0.75em;
+  outline: none;
 }
 
 input[type="submit"]{
